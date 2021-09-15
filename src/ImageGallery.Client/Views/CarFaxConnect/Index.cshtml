@@ -1,0 +1,19 @@
+﻿
+@model IdentityModel.Client.UserInfoResponse
+
+<div class="container">
+    <div class="h3">CarFax Authorized </div>
+
+    <div>
+        Claims :
+        @foreach (var a in Model.Claims)
+        {
+            @a.Type @a.Value @a.Issuer
+        }
+
+    </div>
+
+    <div>
+        @Model.Raw
+    </div>
+</div>
